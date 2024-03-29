@@ -1,0 +1,117 @@
+/* .columns {
+} */
+
+/* .columns {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1em;
+} */
+
+.columns {
+  display: flex;
+  align-items: stretch;
+  /* align-items manipulates items against the main axis
+    - default is stretch - allows item to stretch to fill full height of row (or width of column if flex-direction is changed)
+    - can perform alignment on individual items   */
+
+  /* flex-direction: column; */
+  /* This flips the main axis of the flexbox to line thngs up vertically */
+  gap: 2rem;
+  /* - When making each column a flexbox the min-width function will be applied (text will try to fit the least amount on one line before wraping) */
+  border: 10px solid firebrick;
+}
+
+/* We set the columns to stack on top of eachother for mobile screen size (mobile first)
+- will use a media querie to arrange columns as screen size increases */
+
+@media (min-width: 750px) {
+    .columns {
+        flex-direction: row;
+    }
+    /* This method of changing flex direction for the mobile screen size simplifies editing
+        - gap is applied to parent container which automatically formats spacing between child elements rather than having to play with margins of individual elements */
+}
+
+.columns > * {
+  flex: 1;
+  /* shorthand for the following attributes
+    
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+    -sets content to min-width size (doesn't make width 0)
+These commands would also give you equal columns:
+    
+width: 100%;
+
+flex-basis:100%;
+
+
+
+  */
+}
+.card:nth-child(2) {
+  background: pink;
+  align-self: flex-end;
+  /* This allows you to align specific items within container against the main axis */
+}
+/* .columns > *:last-child {
+  flex-grow: 1;
+} */ 
+
+/* general styling */
+
+.card {
+  padding: 1rem;
+  background: hsl(var(--clr-green));
+}
+
+.tags {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  font-size: 0.725rem;
+}
+
+.tag {
+  background: hsl(0 0% 100% / 0.4);
+  padding: 0.25rem 0.5rem;
+}
+
+:root {
+  --clr-orange: 7 100% 63%;
+  --clr-blue: 239 100% 50%;
+  --clr-green: 125 50% 50%;
+  --spacer: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: var(--spacer);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  line-height: 1.1;
+  color: hsl(var(--clr-orange));
+  text-shadow: 0.05em 0.05em 0 hsl(0 0% 0% / 0.7);
+}
+
+.cards h2 {
+  font-weight: 800;
+}
+
+.card h3 {
+  font-weight: 800;
+}

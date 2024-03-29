@@ -1,0 +1,63 @@
+.main-p {
+    color: #df1515; /* changes text color */
+
+    font-family: Arial, Helvetica, sans-serif; 
+        /* First font is preferred, subsequnt fonts are loaded if previous font is not supported */
+    
+    font-size: 70px; 
+    /* units such as rem could be used to make things more uniform */
+   
+    font-weight: 900;
+    /* boldness or thinness */
+   
+    font-style: italic; 
+    /* changes how letters themselves are presented */
+   
+    text-align: center;
+    /* horizontal allignment  */
+   
+    text-decoration: underline;
+    /* Decoration placed on letters */
+   
+    text-transform: none;
+    /* Manipulate what letters/words are capitalized */
+   
+    line-height: 78px;
+    /* increases spacing between lines 
+    should be larger than font size */
+   
+    word-spacing: 10px;
+    /* increases spacing between words */
+}
+
+.test-div {
+    width: 100px;
+    height: 100px;
+
+    background-color: aquamarine;
+    /* Changing the background color allows you to see the box */
+    
+    margin: 200px 0 0 300px;
+    /* Creates space between elements */
+    
+    padding: 200px 0 0 300px;
+    /* Extends container further by these dimensions.
+    Order: Top Right Bottom Left
+    */
+    
+    z-index: 2;
+    /* Used to rank content, telling browser in what order to layer overlapping elements */
+    
+    border: blue solid 10px;
+    /*      Color  style  size    
+    Borders add to total area of box*/
+    
+    cursor: pointer;
+    /* changes mouse icon when hovering */
+    
+    display: block;
+    /* changes in-line elements to block elements (opposite is done as well*/
+    
+    display: none; 
+    /* makes items disappear */
+}

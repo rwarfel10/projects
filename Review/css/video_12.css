@@ -1,0 +1,141 @@
+body {
+    background-color: #444141;
+    
+}
+
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/facebook-color.png) url(../img/instagram-color.png)
+}
+
+a {
+    cursor: pointer;
+}
+
+.header-main{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+
+.header-main-logo {
+
+width: fit-content;
+/* changes div size to fit content inside */
+
+height: 100%;
+/* 100% of container (.header-main) */
+
+
+padding-left: 60px;
+/* creates a little seperation from the left margin  */
+display: flex;
+/* makes this div a flex container for logo and nav section */
+
+}
+
+.header-main-logo img {
+
+    height: 40px;
+
+    align-self: center;
+    /* image is in a flex container so we can use a flex command to center it  */
+
+    }
+
+
+.header-main-nav {
+    width: fit-content;
+height: 100%;
+
+
+
+}
+.header-main-nav ul {
+    list-style: none;
+    margin-left: 30px;
+
+
+
+    display: flex;
+    /* making the list a flex box allows you to change orientation */
+    
+}
+
+.header-main-nav ul li a {
+
+    padding: 0 10px;
+    /* Adding padding to a link will increase the clickable area of the link and makes it easier to use */
+
+    display: block;
+    height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    /* The text of a link is normally styled in the anchor tag as this is where the text is located */
+
+    line-height: 60px;
+    /* Making the line height the same as the header height will center the text vertically with the header */
+
+
+} 
+
+.header-main-nav ul li a:hover {
+
+    /* This will change the color of the text in the nav section when the mouse is hovering over the links */
+ color: #c13584;
+
+
+} 
+
+.header-main-sm {
+    width: 120px;
+
+height: 100%;
+
+padding-right: 60px;
+
+/* We make main container a flexbox to move items around inside */
+display: flex;
+align-items: center;
+column-gap: 10px;
+
+
+
+}
+.header-main-sm-fb {
+width: 20px;
+height: 20px;
+background-image: url(../img/facebook.png);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.header-main-sm-fb:hover {
+   
+    background-image: url(../img/facebook-color.png);
+    
+    }
+
+.header-main-sm-ig {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-main-sm-ig:hover {
+   
+    background-image: url(../img/instagram-color.png);
+   
+}

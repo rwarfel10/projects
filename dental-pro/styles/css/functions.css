@@ -1,0 +1,30 @@
+/* Default
+-----------------------------------*/
+:root {
+  --primary: #009ECF;
+  --primary-alt: #F85400;
+  --secondary: #FFD100;
+  --secondary-alt: #FFA700;
+  --tertiary: #FFED93;
+  --tertiary-alt: #00B9DA;
+  --third: var(--tertiary);
+  --third-alt: var(--tertiary-alt);
+  --light: white;
+  --dark: #54595F;
+  --grey: #75808c;
+  --radius: 24px;
+  --default-time: 0.2s;
+  --theme-font-system:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Helvetica,
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol";
+  --theme-font: "marigny", sans-serif; }
+
+/*# sourceMappingURL=functions.css.map */

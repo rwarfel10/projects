@@ -1,0 +1,111 @@
+.nav-list {
+    display: flex;
+    /* Using display: flex in a list takes list items (block elements) and changes them to flex elements (they can now be placed next to each other)
+        - other display functions on list items will not work while flex is on the parent container */
+
+    justify-content: space-evenly;
+    /* this determinses how empty space along main direction (row by default) is organized around items
+     - justify-content will only work if container is big enough to have empty space or no flex-grow is applied to child items*/
+    
+    
+    gap: 1rem;
+
+    /* flex-wrap: wrap; */
+    /* Allows items within this container to wrap when the width of the page gets too small and elements are already at their min width
+    */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /* parent element - sets groundwork for layout of children */
+}
+
+.nav-list li {
+    /* Child element - controlls where individual elements within container are placed */
+    /* width: max-content;
+        - Puts all text on one line (no wrap) and makes the width of that line the width of the element
+        - applying display: flex will do this to list items automatically and put them on one line until screen shrinks
+        
+       width: min-content;
+        - Allows text to wrap in container, width of the longest word becomes container width*/
+
+    flex-shrink: 1;
+    /* allows li elements to shrink when page size decreases so they can stay in the parent container */
+
+    flex-grow: 0;
+    /* This will equally distribute empty space between li elements (as long as they each have the same number for flex-grow)
+    
+    - This number is a ratio of how fast the element will grow in relation to the other elements as the page size increases*/
+
+
+
+
+    }
+
+/* to help visualize */
+header {
+    --border-width: 5px;
+  }
+  
+  .nav-list {
+    border: var(--border-width) solid hsl(var(--clr-orange) / 0.5);
+  }
+  
+  .nav-list > li {
+    border: var(--border-width) solid hsl(var(--clr-green) / 0.5);
+  }
+  
+  .info {
+    font-size: 1.5rem;
+    margin-top: max(3rem, 10vh);
+  }
+  
+  .dot {
+    padding: 0.25rem;
+    width: 0;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  
+  .orange {
+    background: hsl(var(--clr-orange));
+  }
+  .green {
+    background: hsl(var(--clr-green));
+  }
+  /* general styling */
+  
+  header {
+    margin-block: 3rem;
+  }
+  
+  :root {
+    --clr-orange: 7 100% 63%;
+    --clr-blue: 239 100% 50%;
+    --clr-green: 125 50% 50%;
+    --spacer: 2rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    padding: var(--spacer);
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    margin-bottom: 1em;
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+    line-height: 1.1;
+    color: hsl(var(--clr-orange));
+    text-shadow: 0.05em 0.05em 0 hsl(0 0% 0% / 0.7);
+  }
+  

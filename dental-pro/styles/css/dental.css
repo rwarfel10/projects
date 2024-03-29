@@ -1,0 +1,711 @@
+@import url("globals.css");
+
+/* Var Scopes 
+--------------------------------*/
+:root{
+    --max-header-width: 1280px;
+}
+
+
+
+/* Anchor Tags
+--------------------------------*/
+.dental a:hover{
+    text-decoration: none;
+}
+
+/* Buttons
+--------------------------------*/
+.dental .button,
+.dental .button,
+.frm_style_formidable-style.with_frm_style .frm_submit button {
+    background: var(--secondary-alt);
+    border: none;
+}
+
+
+/* Site Header Pusdo Elements
+--------------------------------*/
+.dental .site-header .wrap::after,
+.dental .site-header .wrap::before{
+    display: none;
+}
+
+.dental .site-header{
+    box-shadow: none;
+}
+
+/* Site Header Wrap
+--------------------------------*/
+.dental .site-header > .wrap{
+    display: grid;
+    grid-template-columns: .25fr 1fr;
+    max-width: var(--max-header-width);
+    margin: auto;
+}
+
+
+/* Logo
+--------------------------------*/
+.dental .site-header div.title-area img{
+    height: 144px;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 1023px) {
+    .dental .site-header div.title-area{
+        width: 110px;
+    }
+
+    .dental .site-header div.title-area img{
+        height: 100%;
+        min-height: 140px;
+    }
+}
+
+.dental a{
+    width: 100%;
+}
+
+/* Navigation 
+--------------------------------*/
+.dental .site-header .wrap .widget-area.header-widget-area{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: inherit;
+}
+
+.dental nav.nav-primary{
+    background-color: transparent;
+}
+
+.dental nav.nav-primary div.wrap > ul li.call_now{
+    background-color: var(--primary-alt);
+    border-radius: calc( var(--radius) / 2 );
+}
+
+.dental .nav-primary .genesis-nav-menu a{
+    color: var(--dark);
+}
+
+.dental .nav-primary li.mobile_nav_title,
+.dental .nav-primary li.mobile_nav_li{
+    display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+    .dental .nav-primary, .nav-secondary{
+        display: block;
+    }
+
+    .dental nav.nav-primary div.wrap > ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .dental .nav-primary li.menu-item{
+        display: none;
+    }
+
+    .dental .nav-primary li.mobile_nav_li{
+        display: block;
+    }
+
+    .dental .nav-primary li.mobile_nav_li i.fa-xmark{
+        display: none;
+    }
+}
+
+.dental nav.nav-primary.active{
+    position: fixed;
+    z-index: 999;
+    background: var(--light);
+    background: rgba(255,255,255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    gap: 1rem;
+}
+
+.dental nav.nav-primary.active::before,
+.dental nav.nav-primary.active::after{
+    display: none;
+}
+
+.dental nav.nav-primary.active div.wrap{
+    width: 100%;
+}
+
+.dental nav.nav-primary.active div.wrap > ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.dental nav.nav-primary.active div.wrap > ul li.mobile_nav_title{
+    display: block;
+    order: 1;
+}
+
+.dental nav.nav-primary.active div.wrap > ul li.mobile_nav_title h2{
+    margin: 0;
+    border-bottom: solid 1px var(--dark);
+}
+
+.dental nav.nav-primary.active div.wrap > ul li.menu-item{
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+}
+
+.dental.logged-in nav.nav-primary.active div.wrap > ul li.mobile_nav_li{
+    top: 32px;
+}
+
+.dental nav.nav-primary.active div.wrap > ul li.mobile_nav_li{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dental nav.nav-primary.active div.wrap > ul li.mobile_nav_li button{
+    background: transparent;
+    color: var(--dark);
+    font-size: 2.0rem;
+}
+
+
+/* Hero Area 
+--------------------------------*/
+div.home_page_hero{
+    min-height: 75vh;
+    min-height: 75dvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--max-header-width);
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: var(--radius);
+    position: relative;
+}
+
+.dental div#cta_card_container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    min-height: 70vh;
+    min-height: 70dvh;
+    position: relative;
+}
+
+.dental div#cta_card_container div.cta_card{
+    border-radius: var(--radius);
+    background-color: rgba(255,255,255,0.8);
+    color: var(--dark);
+    width: 100%;
+    padding: var(--radius);
+    display: grid;
+    gap: calc( var(--radius) / 2);
+}
+
+.dental div#cta_card_container div.cta_card h2,
+.dental div#cta_card_container div.cta_card p,
+.dental div#cta_card_container div.cta_card form{
+    margin: 0;
+}
+
+.dental div#cta_card_container div.cta_card h2{
+    color: var(--secondary-alt);
+}
+
+.dental div#cta_card_container div.cta_card form input{
+    background: transparent;
+    border-color: var(--light-grey);
+    height: calc( var(--radius) * 2);
+    border-radius: calc( var(--radius) / 2);
+}
+
+.dental div#cta_card_container div.cta_card form label{
+    font-weight: 700;
+}
+
+/* Home Services Area 
+--------------------------------*/
+.dental div.home_page_services_cont{
+    max-width: calc( var(--max-header-width) / 1.1 );
+    margin: calc( var(--radius) * 2 ) auto auto auto;
+}
+
+.dental div.home_page_services_cont ul{
+    display: grid;
+    gap: var(--radius);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    padding: 0;
+    margin: 0;
+}
+
+.dental div.home_page_services_cont ul li{
+    background-color: var(--light-background);
+    border-radius: calc( var(--radius) / 2 );
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+    transform: scale(1);
+	transition: all var(--default-time) ease-in-out;
+    position: relative;
+    z-index: 5;
+}
+
+.dental div.home_page_services_cont ul li:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.3));
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+.dental div.home_page_services_cont ul li a{
+    display: grid;
+    gap: calc( var(--radius) / 2 );
+    padding: var(--radius);
+}
+
+.dental div.home_page_services_cont ul li a h3,
+.dental div.home_page_services_cont ul li a p{
+    margin: 0;
+}
+
+.dental div.home_page_services_cont ul li a h3{
+    color: var(--secondary-alt);
+}
+
+.dental div.home_page_services_cont ul li a p{
+    color: var(--dark);
+}
+
+/* Recent News Area
+--------------------------------*/
+div.recent_news_posts{
+    display: flex;
+    max-width: var(--max-header-width);
+    margin: calc( var(--radius) * 2 ) auto;
+}
+
+div.recent_news_posts ul{
+    display: grid;
+    gap: var(--radius);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+div.recent_news_posts ul li{
+    display: grid;
+    gap: calc( var(--radius) / 2);
+    background-color: var(--light-background);
+    border-radius: calc( var(--radius) / 2 );
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+    padding: var(--radius);
+}
+
+div.recent_news_posts ul li h3,
+div.recent_news_posts ul li p{
+    margin: 0;
+}
+
+
+div.recent_news_posts ul li.item_1{
+    grid-row: span 2;
+}
+
+div.recent_news_posts ul li.item_2,
+div.recent_news_posts ul li.item_3{
+    grid-template-columns: repeat(2,1fr);
+}
+
+div.recent_news_posts ul li.item_1 .cont,
+div.recent_news_posts ul li.item_2 .cont,
+div.recent_news_posts ul li.item_3 .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 80%;
+    margin: auto;
+}
+
+div.recent_news_posts ul h3{
+    color: var(--dark);
+}
+
+div.recent_news_posts ul p{
+    color: var(--dark);
+}
+
+
+
+div.recent_news_posts ul time{
+    color: var(--primary-alt);
+}
+
+div.recent_news_posts ul img{
+    border-radius: calc( var(--radius) / 2);
+    height: 80%;
+    max-height: 50vh;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* Footer 
+--------------------------------*/
+.dental footer.site-footer{
+    background-color: var(--light-background);
+    color: var(--primary-alt);
+}
+
+.dental ul.social_media_icons,
+.dental ul.social_media_icons li{
+    padding: 0;
+    margin: 0;
+}
+
+.dental ul.social_media_icons{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* About Us Page 
+--------------------------------*/
+.dental.page-id-11 h3, 
+.dental.page-id-11 h2{
+    color: var(--secondary-alt)
+}
+.dental.page-id-11 figure {
+    margin: auto;
+    height:fit-content;
+    width:fit-content;
+}
+
+.dental.page-id-11 .entry-header,
+.dental.page-id-11 .post-edit-link{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dental.page-id-11 img {
+    border-radius: calc(var(--radius)/2);
+}
+
+.dental.page-id-11 article {
+    width: 100%;
+}
+
+.dental.page-id-11 div.site-inner
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.dental.page-id-11 ul.about_us_grid{
+    display: grid;
+    gap: 1rem;
+}
+
+.dental.page-id-11 ul.about_us_grid li{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "content image";
+}
+
+.dental.page-id-11 ul.about_us_grid li:nth-child(even){
+    grid-template-areas: "image content";
+}
+
+.dental.page-id-11 ul.about_us_grid li div.grid_content{
+    grid-area: content;
+}
+
+.dental.page-id-11 ul.about_us_grid li div.grid_image{
+    grid-area: image;
+}
+
+.dental.page-id-11 ul.values_grid{
+    display: grid;
+    gap: 1rem;
+}
+
+.dental.page-id-11 ul.values_grid li {
+    background: var(--light-background);
+    border-radius: var(--radius);
+    padding: var(--radius);
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+
+}
+
+.dental .button_cont {
+    display: grid;
+    /* gap: 1rem; */
+
+}
+.dental  .about_cta_cont, 
+.dental  .about_phone_cont{
+    margin: 0 auto var(--radius) auto;
+    width: 60%;
+
+}
+
+/* .dental.page-id-11 .button_cont .about_cta_cont a, 
+.dental.page-id-11 .button_cont .about_phone_cont a {
+    
+} */
+
+
+
+
+/* Logo Area
+----------------------------- */
+
+.dental.page-id-11 div.wp-block-group__inner-container h1 {
+    color: var(--secondary-alt);
+    font-size: 80px;
+    letter-spacing: .2rem;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.dental.page-id-11 div.wp-block-group__inner-container p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Pic & Text Area
+----------------------------- */
+
+
+.dental.page-id-11 div.wp-block-columns{
+    margin: calc(var(--radius)*2) 0;
+}
+.dental.page-id-11 ul.about_us_grid .grid_content,
+.dental.page-id-11 ul.about_us_grid .grid_image
+{
+    background: var(--light-background);
+    border-radius: var(--radius);
+    padding: var(--radius);
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+}
+ .dental.page-id-11 ul.about_us_grid .grid_image {
+    display: flex;
+    align-items: center;
+ }
+/* Text Boxes Only
+----------------------------- */
+
+.dental.page-id-11 .wp-block-group.text-list
+{   background: var(--light-background);
+    border-radius: var(--radius);
+    padding: var(--radius);
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+    margin: var(--radius);
+}
+.dental.page-id-11 .wp-block-group.text-list h2{
+    color: var(--secondary-alt);
+}
+
+.dental.page-id-11 .wp-block-group.text-list p{
+    color: var(--dark);
+}
+
+
+
+/* Call to Action
+----------------------------- */
+
+.dental.page-id-11 ul.action_grid li{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: calc(var(--radius)*2);
+}
+.dental.page-id-11 ul.action_grid .grid_content {
+    display: flex;
+    align-items: center;
+    padding-right: var(--radius);
+}
+.dental.page-id-11 ul.action_grid .grid_content h3 {
+    color: var(--dark)
+}
+
+@media (max-width: 781px) {
+
+
+    .dental.page-id-11 ul.about_us_grid li {
+        display: block;
+    }
+    .dental.page-id-11 ul.about_us_grid li:first-child .grid_image {
+    display: none;
+    }
+    
+    .dental.page-id-11 ul.about_us_grid li .grid_image {
+        margin-top: 1rem;
+
+    }
+    .dental.page-id-11 ul.action_grid li {
+        display: block;
+    }
+
+    .dental.page-id-11 ul.action_grid .grid_image{
+        display: none;
+    }
+
+    
+}
+
+/* Contact Page */
+
+.dental.page-id-13 .entry-header,
+.dental.page-id-13 .post-edit-link{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dental.page-id-13 .wp-block-spacer{
+    background-color: var(--primary-alt);
+    border-radius: var(--radius);
+}
+
+.dental.page-id-13 .wp-block-heading{
+    color: var(--secondary-alt);
+    text-wrap: nowrap;
+}
+
+.dental.page-id-13 .wp-block-columns .wp-block-group__inner-container h2{
+    margin: 0;
+} 
+.dental.page-id-13 .wp-block-columns .wp-block-group__inner-container p { 
+    margin: 0 auto var(--radius) auto;
+}
+
+.dental.page-id-13 .wp-block-columns .frm_forms{
+    background: var(--light-background);
+    border-radius: var(--radius);
+    padding: var(--radius);
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+    
+}
+
+/* Blog Page
+--------------------------------*/
+.page-template-template-news .content{
+    max-width: 100%;
+    width: 100%;
+}
+
+.dental.page-id-15 .entry-title {
+    display: none;
+}
+
+.dental.page-id-15 ul.blog_posts_grid,
+.dental.page-id-15 ul.blog_posts_grid li{
+    padding: 0;
+    margin: 0;
+}
+
+.dental.page-id-15 ul.blog_posts_grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.dental.page-id-15 ul.blog_posts_grid li{
+    background-color: var(--light-background);
+    border-radius: calc( var(--radius) / 2 );
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+    padding: var(--radius);
+    overflow: hidden;
+    
+}
+
+.dental.page-id-15 ul.blog_posts_grid li:hover{
+filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.3));
+transform: scale(1.02);}
+
+.dental.page-id-15 ul.blog_posts_grid li a{
+    object-fit: cover;
+}
+.dental.page-id-15 ul.blog_posts_grid li span {
+    color: var(--primary-alt)
+}
+.dental.page-id-15 ul.blog_posts_grid li h2 {
+    margin: 0;
+}
+.dental.page-id-15 ul.blog_posts_grid li p{
+    color: var(--dark);
+}
+.dental.page-id-15 ul.blog_posts_grid li img {
+display: block;
+border-radius: calc( var(--radius) / 2);
+height: 200px;
+width: 100%; 
+object-fit: cover;
+}
+
+.dental.page-id-15 .about_cta_cont {
+    margin-top: var(--radius);
+}
+
+@media (max-width: 1200px) {
+    .dental.page-id-13 .content-sidebar-wrap main#genesis-content.content{
+        margin: 0;
+        width: 100%;
+}
+}
+ @media (max-width: 1026px) {
+    .dental .site-header > .wrap{
+        display: grid;
+        grid-template-columns: repeat(auto-fit minmax(200px, 1fr));
+        max-width: var(--max-header-width);
+        margin: auto;
+    }
+
+} 
+
+@media (max-width: 900px) {
+    div.recent_news_posts ul{
+        grid-template-columns: 1fr;
+        
+    }
+     div.recent_news_posts ul li.item_1{
+        grid-row: auto;
+        grid-template-columns: repeat(2,1fr);
+    }
+} 
+
+@media (max-width: 781px) {
+    .dental.page-id-13 .wp-block-spacer{
+        display: none;
+    }
+.dental.page-id-15 ul.blog_posts_grid li {
+    max-height: 70vh;
+}
+}

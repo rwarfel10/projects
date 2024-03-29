@@ -1,0 +1,103 @@
+.header-main {
+
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    /* Flexbox will first be applied to main container */
+    display: flex;
+    /* This displays items in order starting from flex position (horizontal now instead of vertical) */
+
+    flex-direction: row;
+    /* flex-direction changes orientation and direction order of objects placed in flex box
+    
+    row - aligns items in rows
+    row-reverse - flips direction of rows
+    column - aligns items in to columns
+    column-reverse - flips direction of columns*/
+
+    flex-wrap: wrap;
+    /* flex-wrap changes how items act as page/container shrinks or changes size.
+    
+    wrap - items will wrap to the next line when it overflows
+    wrap-reverse - items will start at the bottom and wrap upwards
+    no-wrap - items are forced to be on one line*/
+
+    justify-content: space-between;
+    /* justify-content changes horizontal spacing between elements in the container.
+    
+    space-between - evenly spaces content, takes empty space and places it evenly between objects.
+    center - everything is placed in the center of the page.
+    flex-start - positioning starts from top left
+    flex-end - positioning starts from bottom right
+    space-evenly - places objects evenly with open space around objects*/
+
+    align-content: normal;
+    /* align-content structures things vertically
+    
+    flex-start - places content on top of page
+    flex-end - places content on bottom of page
+    center - places content in middle of page
+    space-between - puts items at either end and evenly spaces items between
+    space-evenly - evenly puts empty space around flex items*/
+
+    gap: 500px 400px;
+    /*  row gap   column gap 
+    
+    allows you to choose specific spacing between elements*/
+
+    align-items: center;
+    /* Vertically centers items when placed on container */
+
+}
+
+.header-main div {
+height: 30px;
+}
+
+.header-main .div-1 {
+    width: 100px;
+    background-color: blueviolet;
+
+    order: 1;
+    /* The order number denotes in which order the items are to be placed within  */
+
+    flex-basis: 100px;
+    /* flex-basis - tells div how mush space to take up horizontally
+        - creates a baseline where things will divert from as page changes size.
+         */
+
+    flex-grow: 1;
+    /* flex-grow - determines the rate at which the item will take up empty space as page grows */
+
+}
+
+.header-main .div-2 {
+    width: 100px;
+    background-color: aquamarine;
+    flex-basis: 100px;
+    
+    order: 2;
+
+    flex-grow: 2;
+    /* This div will grow at twice the rate of the first one */
+
+    align-self: flex-end;
+    /* align-self - overwrites position for individual elements */
+
+
+}
+.header-main .div-3 {
+    width: 100px;
+    background-color: pink;
+  
+    order: 3;
+    flex: 0 1 300px;
+
+
+}
+
+/* Flex shorthand:
+        flex: 0 0 100px;
+        flex: grow# shrink# basis#;
+         */
+

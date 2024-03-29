@@ -1,0 +1,43 @@
+/* Load in hover effect photo at the beginning to avoid flicker effect */
+body:after {
+    
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow:hidden;
+        Z-index: -1;
+        content: url(../img/pexels-charles-1851188.jpg);
+
+}
+.img {
+    width: 300px;
+    margin-left: 200px;
+    /* moves picture away from left margin. */
+
+}
+
+/* Div dimensions and link are stored in CSS for box method */
+.image {
+    width: 500px;
+    height: 450px;
+    background-image: url(../img/pexels-charles-1851164.jpg);
+    background-size: 100%;
+/* 
+background-size changes size of picture:
+
+% - will fill percentage of box then repeat to fill
+
+cover - image will cover entire container
+      - some of the image will be cut off
+        - change positioning to fix
+*/
+background-repeat: no-repeat;
+background-position: center;
+/* transition will dictate how your image will respond to things like hover effects */
+transition: all ease-in-out 100ms;
+}
+/* Create pseudo class to make a hover effect */
+.image:hover{
+    /* insert black & white image for mouse hover */
+background-image: url(../img/pexels-charles-1851188.jpg);
+}

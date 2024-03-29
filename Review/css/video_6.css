@@ -1,0 +1,33 @@
+p {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+/* The paragraph above will have red text. The first command was overwritten by the second. */
+
+div p span {
+    color: blue;
+}
+
+/* Each selector gets more specific
+
+This selects any span within paragraphs contained within a div */
+
+ #main-paragraph-styling {
+    color: blue;
+
+} 
+
+/* "#" symbol represents ID selector in CSS*/
+
+.main-paragraph-styling {
+    color: blue;
+}
+
+.test {
+    font-size: 70px;
+}
+/* "." used to represent Class selector in CSS */
